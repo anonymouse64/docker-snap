@@ -1,0 +1,19 @@
+language: go
+sudo: required
+go:
+  - 1.10.x
+
+go_import_path: github.com/anonymouse64/docker-snap
+
+addons:
+  apt:
+    packages:
+      - uvtool-libvirt
+    update: true
+
+install:
+  - go get github.com/snapcore/spread/...
+  - go install github.com/snapcore/spread/...
+
+script:
+  - spread -vv
