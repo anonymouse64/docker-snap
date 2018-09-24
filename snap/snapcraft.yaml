@@ -8,8 +8,8 @@ grade: stable
 
 
 plugs:
-  home:
-    read: all
+  # home:
+  #   read: all
   support:
     interface: docker-support
   privileged:
